@@ -1,0 +1,28 @@
+.movie-card {
+  height: 700px;
+  border-radius: 4px;
+  background-color: #fff;
+  overflow: hidden;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.movie-card .content {
+  padding: 8px;
+}
+
+.movie-card img {
+  display: block;
+  max-width: 100%;
+}
+
+.movie-card .title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+.movie-card .descr {
+  margin-bottom: 0;
+  line-height: 1.5;
+}

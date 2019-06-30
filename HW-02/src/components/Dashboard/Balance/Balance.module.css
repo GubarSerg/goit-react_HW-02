@@ -1,0 +1,12 @@
+.balance {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.balance span {
+  display: inline-block;
+  width: 150px;
+}
+
+.balance i {
+  margin-right: 8px;
+}
