@@ -40,22 +40,23 @@ class Dashboard extends Component {
     if (inputAmount <= 0) {
       notCorrect();
     } else {
-      this.setState(state => ({
-        history: [
-          ...state.history,
-          {
-            id: shortId.generate(),
-            type: 'deposit',
-            amount: inputAmount,
-            date: date.toLocaleString(),
-          },
-        ],
-        deposit: state.deposit + money,
-        balance: state.balance + money,
-      }));
+      this.setState(
+        state => ({
+          history: [
+            ...state.history,
+            {
+              id: shortId.generate(),
+              type: 'deposit',
+              amount: inputAmount,
+              date: date.toLocaleString(),
+            },
+          ],
+          deposit: state.deposit + money,
+          balance: state.balance + money,
+        }),
+        this.clearInput(),
+      );
     }
-
-    this.clearInput();
   };
 
   addWithdraw = () => {
@@ -67,21 +68,23 @@ class Dashboard extends Component {
     } else if (inputAmount <= 0) {
       notCorrect();
     } else {
-      this.setState(state => ({
-        history: [
-          ...state.history,
-          {
-            id: shortId.generate(),
-            type: 'withdraw',
-            amount: inputAmount,
-            date: date.toLocaleString(),
-          },
-        ],
-        withdraw: state.withdraw + money,
-        balance: state.balance - money,
-      }));
+      this.setState(
+        state => ({
+          history: [
+            ...state.history,
+            {
+              id: shortId.generate(),
+              type: 'withdraw',
+              amount: inputAmount,
+              date: date.toLocaleString(),
+            },
+          ],
+          withdraw: state.withdraw + money,
+          balance: state.balance - money,
+        }),
+        this.clearInput(),
+      );
     }
-    this.clearInput();
   };
 
   render() {
